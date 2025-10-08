@@ -5,12 +5,12 @@ pipeline {
         IMAGE_NAME = 'flask-cicd-demo'
     }
 
-    stages {
-        stage('Clone Repository') {
-            steps {
-                git 'https://github.com/your-github-username/flask-cicd-demo.git'
-            }
-        }
+    stage('Clone Repository') {
+    steps {
+        git branch: 'main', url: 'https://github.com/manik08125/flask-cicd-demo.git'
+    }
+}
+
 
         stage('Build Docker Image') {
             steps {
